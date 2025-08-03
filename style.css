@@ -1,13 +1,44 @@
-/* Google Font CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
+.cursor {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: 1px solid     rgb(0, 30, 255);
+  transition: all 300ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  }
+  .cursor2 {
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background-color:  rgb(0, 30, 255);
+  opacity: 1;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+  }
+  
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
+  }
 /*
 #bg {
   position: absolute; 
@@ -23,12 +54,11 @@
 }
 */
 
-/* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: white;
+    background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
     background: #6e93f7;
@@ -39,7 +69,7 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #4070f4;
 }
-/* navbar styling */
+
 nav{
   position: fixed;
   width: 100%;
@@ -61,7 +91,7 @@ nav .navbar{
 }
 nav .navbar .logo a{
   font-weight: 500;
-  font-size: 15px;
+  font-size: 35px;
   color: #4070f4;
 }
 nav.sticky .navbar .logo a{
@@ -100,7 +130,6 @@ nav.sticky .media-icons a{
   color: #FFF;
 }
 
-/* Side Navigation Menu Button CSS */
 nav .menu-btn,
 .navbar .menu .cancel-btn{
   position: absolute;
@@ -108,10 +137,11 @@ nav .menu-btn,
   right: 30px;
   top: 20px;
   font-size: 20px;
-  cursor: pointer;
+  cursor: none;
   transition: all 0.3s ease;
   display: none;
 }
+
 nav .menu-btn{
   color: #4070f4;
 }
@@ -122,7 +152,6 @@ nav.sticky .menu-btn{
   color: #fff;
 }
 
-/* home section styling */
 .home{
   height: 100vh;
   width: 100%;
@@ -150,6 +179,9 @@ nav.sticky .menu-btn{
   font-weight: 600;
   margin-left: -3px;
 }
+.home .text-two design{
+  color: #4070f4;
+}
 .home .text-three{
   font-size: 40px;
   margin: 5px 0;
@@ -163,27 +195,20 @@ nav.sticky .menu-btn{
 .home .button{
   margin: 14px 0;
 }
+
 .home .button button{
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 25px;
-  font-weight: 400;
   background: #4070f4;
-  color: #fff;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
-}
+  cursor: none;
+  }
 .home .button button:hover{
+  color: #ffffff;
+  transform: scale(1.02);
   border-color: #4070f4;
   background-color: #fff;
   color: #4070f4;
+  cursor: none;
 }
 
-/* About Section Styling */
-/* Those Elements Where We Have Apply Same CSS,
- I'm Selecting Directly 'Section Tag' and 'Class'  */
 section{
   padding-top: 40px;
 }
@@ -259,16 +284,17 @@ section .button button{
   background: #4070f4;
   color: #fff;
   border: 2px solid transparent;
-  cursor: pointer;
+  cursor: none;
   transition: all 0.4s ease;
 }
 section .button button:hover{
+  transform: scale(1.02);
   border-color: #4070f4;
   background-color: #fff;
   color: #4070f4;
+  cursor: none;
 }
 
- /* My Skills CSS */
  .skills{
    background: #F0F8FF;
  }
@@ -329,7 +355,6 @@ section .button button:hover{
   font-size: 20px;
 }
 
-/* My Services CSS */
 .services .boxes{
   display: flex;
   flex-wrap: wrap;
@@ -342,12 +367,14 @@ section .button button:hover{
   border-radius: 12px;
   padding: 30px 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  cursor: default;
+  cursor: none;
   transition: all 0.4s ease;
 }
 .services .boxes .box:hover{
+  transform: scale(1.03);
   background: #4070f4;
   color: #fff;
+  cursor: none;
 }
 .services .boxes .box .icon{
   height: 50px;
@@ -374,7 +401,7 @@ section .button button:hover{
 .services .boxes .box:hover p{
   color: #fff;
 }
-/* Contact Me CSS */
+
 .contact{
   background: #F0F8FF;
 }
@@ -388,7 +415,7 @@ section .button button:hover{
   margin: auto;
 }
 
-/* Footer CSS */
+
 footer{
   background: #4070f4;
   padding: 15px 0;
@@ -407,7 +434,7 @@ footer .text span a{
 footer .text span a:hover{
   text-decoration: underline;
 }
-/* Scroll TO Top Button CSS */
+
 .scroll-button a{
   position: fixed;
   bottom: 20px;
@@ -421,7 +448,7 @@ footer .text span a:hover{
   display: none;
 }
 
-/* Responsive Media Query */
+
 @media (max-width: 1190px) {
   section .content{
     width: 85%;
